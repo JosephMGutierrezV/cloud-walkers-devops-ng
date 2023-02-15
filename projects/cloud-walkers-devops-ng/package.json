@@ -1,0 +1,20 @@
+{
+  "name": "cloud-walkers-devops-ng",
+  "author": {
+    "name": "Joseph Mauricio Gutierrez Valero",
+    "email": "josephmauricio23@hotmail.com",
+    "url": "https://cloud-walkers-devops.com/home-profile"
+  },
+  "homepage": "https://github.com/JosephMGutierrezV/cloud-walkers-devops-ng/README.md",
+  "description": "Cloud Walkers DevOps Angular Library for UI Components and reducers",
+  "version": "0.0.1",
+  "license": "MIT",
+  "peerDependencies": {
+    "@angular/common": "^15.1.0",
+    "@angular/core": "^15.1.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false
+}
