@@ -13,4 +13,6 @@ Visit the [Cloud Walkers DevOps Website](https://cloud-walkers-devops.com/projec
 ## Version log
 
 - v 0.0.1
-  Init Library
+Init Library
+- v 0.0.2
+Add README.MD

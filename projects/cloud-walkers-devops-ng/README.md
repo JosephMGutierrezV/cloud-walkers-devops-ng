@@ -1,24 +1,18 @@
-# CloudWalkersDevopsNg
+# Cloud Walkers DevOps NG
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.0.
+Cloud Walkers DevOps Angular Library for UI Components and reducers
 
-## Code scaffolding
+## Author
 
-Run `ng generate component component-name --project cloud-walkers-devops-ng` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project cloud-walkers-devops-ng`.
-> Note: Don't forget to add `--project cloud-walkers-devops-ng` or else it will be added to the default project in your `angular.json` file. 
+©Joseph Mauricio Gutierrez Valero 2023
 
-## Build
+## Website
 
-Run `ng build cloud-walkers-devops-ng` to build the project. The build artifacts will be stored in the `dist/` directory.
+Visit the [Cloud Walkers DevOps Website](https://cloud-walkers-devops.com/projects/library-angular) for general information, demos and documentation.
 
-## Publishing
+## Version log
 
-After building your library with `ng build cloud-walkers-devops-ng`, go to the dist folder `cd dist/cloud-walkers-devops-ng` and run `npm publish`.
-
-## Running unit tests
-
-Run `ng test cloud-walkers-devops-ng` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- v 0.0.1
+Init Library
+- v 0.0.2
+Add README.MD
