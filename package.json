@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:watch": "ng build cloud-walkers-devops-ng --watch",
     "build:lib": "ng-packagr -p projects/cloud-walkers-devops-ng/ng-package.json",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"

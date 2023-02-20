@@ -1,0 +1,23 @@
+<div class="container-input-text">
+  <input
+    #cInputText
+    [ngClass]="{ invalid: !isValid }"
+    class="c-inputtext"
+    type="text"
+    [disabled]="params.disabled"
+  />
+  <label
+    [ngClass]="{
+      'invalid-text': !isValid,
+      'disabled-text': params.disabled,
+      'text-write': value
+    }"
+    *ngIf="params?.label"
+    >{{ params.label }}</label
+  >
+  <small
+    [ngClass]="{ 'invalid-text': !isValid, 'disabled-text': params.disabled }"
+    *ngIf="params?.helpText"
+    >{{ params.helpText }}</small
+  >
+</div>
