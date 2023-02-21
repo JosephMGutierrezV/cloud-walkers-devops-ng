@@ -8,3 +8,4 @@ export * from './lib/cloud-walkers-devops-ng.module';
 export * from './lib/entities/lib-configuration';
 export * from './lib/components/input-text/input-text.component';
 export * from './lib/entities/interfaces';
+export * from './lib/components/text-area/text-area.component';

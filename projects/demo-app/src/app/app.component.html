@@ -1,22 +1,31 @@
 <form [formGroup]="form" class="card-container">
   <div class="row">
-    <div class="col-4">
+    <div class="col-6 mt-5">
       <c-input-text
         formControlName="email"
         [params]="paramsInputText"
       ></c-input-text>
     </div>
-    <div class="col-4">
+    <div class="col-6 mt-5">
       <c-input-text
         formControlName="name"
         [params]="paramsInputTextDisabled"
       ></c-input-text>
     </div>
-    <div class="col-4">
+    <div class="col-12 mt-5">
       <c-input-text
         formControlName="subject"
         [params]="paramsInputText"
       ></c-input-text>
+    </div>
+    <div class="col-6 mt-5">
+      <c-text-area [params]="paramsInputTextDisabled"></c-text-area>
+    </div>
+    <div class="col-6 mt-5">
+      <c-text-area
+        formControlName="message"
+        [params]="paramsInputText"
+      ></c-text-area>
     </div>
   </div>
 </form>
