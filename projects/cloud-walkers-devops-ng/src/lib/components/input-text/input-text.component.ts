@@ -2,11 +2,20 @@ import {
   AfterViewInit,
   Component,
   ElementRef,
+  forwardRef,
   Input,
   OnDestroy,
-  OnInit,
   ViewChild,
 } from '@angular/core';
+import {
+  AbstractControl,
+  ControlValueAccessor,
+  FormControl,
+  NG_VALIDATORS,
+  NG_VALUE_ACCESSOR,
+  ValidationErrors,
+  Validator,
+} from '@angular/forms';
 import { debounceTime, fromEvent, map, Observable, Subscription } from 'rxjs';
 import { IInputTextParams } from '../../entities/interfaces';
 
@@ -14,20 +23,88 @@ import { IInputTextParams } from '../../entities/interfaces';
   selector: 'c-input-text',
   templateUrl: './input-text.component.html',
   styleUrls: ['./input-text.component.scss'],
+  providers: [
+    {
+      provide: NG_VALUE_ACCESSOR,
+      useExisting: forwardRef(() => CInputTextComponent),
+      multi: true,
+    },
+    {
+      provide: NG_VALIDATORS,
+      useExisting: forwardRef(() => CInputTextComponent),
+      multi: true,
+    },
+  ],
 })
-export class CInputTextComponent implements OnInit, OnDestroy, AfterViewInit {
+export class CInputTextComponent
+  implements ControlValueAccessor, OnDestroy, AfterViewInit, Validator
+{
   @ViewChild('cInputText') cInputText!: ElementRef;
-  @Input() isValid = true;
   @Input() params!: IInputTextParams;
+  @Input() set disabled(value: boolean) {
+    this._disabled = value;
+  }
+  public isValid = true;
   private inputText$!: Observable<any>;
   private subscriptions: Subscription[] = [];
-  public value = '';
+  private _value = '';
+  private onChange: (value: string) => void = () => {};
+  private onTouched: () => void = () => {};
+  private _disabled: boolean = false;
+
+  get value() {
+    return this._value;
+  }
+
+  set value(value: string) {
+    if (this._value !== value) {
+      this._value = value;
+      this.onChange(value);
+      this.onTouched();
+    }
+  }
+
+  get disabled() {
+    return this._disabled;
+  }
 
   constructor() {}
 
-  ngOnInit() {}
+  validate(control: AbstractControl<any, any>): ValidationErrors | null {
+    const isValid = control.valid;
+    const validatorFn = control.validator;
+    const validate = validatorFn
+      ? validatorFn(new FormControl(control.value))
+      : null;
+    if (isValid && validate) {
+      this.isValid = false;
+    } else {
+      this.isValid = true;
+    }
+    return null;
+  }
+
+  writeValue(value: string): void {
+    this.value = value;
+  }
+
+  registerOnChange(fn: (value: string) => void): void {
+    this.onChange = fn;
+  }
+
+  registerOnTouched(fn: () => void): void {
+    this.onTouched = fn;
+  }
+
+  setDisabledState(isDisabled: boolean): void {
+    this.disabled = isDisabled;
+  }
 
   ngAfterViewInit() {
+    this.subscriberInputText$();
+  }
+
+  private subscriberInputText$() {
     this.inputText$ = fromEvent(this.cInputText.nativeElement, 'keyup');
     this.subscriptions.push(
       this.inputText$

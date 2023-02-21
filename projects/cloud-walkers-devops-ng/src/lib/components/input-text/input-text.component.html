@@ -1,7 +1,8 @@
 <div class="container-input-text">
   <input
+    [(ngModel)]="value"
     #cInputText
-    [ngClass]="{ invalid: !isValid }"
+    [ngClass]="{ invalid: !isValid && !params.disabled }"
     class="c-inputtext"
     type="text"
     [disabled]="params.disabled"
