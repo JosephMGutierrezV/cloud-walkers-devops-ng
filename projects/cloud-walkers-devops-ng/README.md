@@ -33,3 +33,8 @@ Add README.MD
 ### v.0.0.5
 
 - Fix disabled
+
+
+### v.0.0.6
+
+- Fix Style invalid text area
