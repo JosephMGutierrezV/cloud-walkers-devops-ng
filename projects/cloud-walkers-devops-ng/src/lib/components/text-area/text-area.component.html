@@ -1,19 +1,19 @@
 <label
   [ngClass]="{
     'invalid-text': !isValid,
-    'disabled-text': params.disabled
+    'disabled-text': params?.disabled
   }"
-  >{{ params.label }}</label
+  >{{ params?.label }}</label
 >
 <div class="container-text-area">
   <textarea
     #cTextArea
     [(ngModel)]="value"
     class="c-inputtextarea"
-    [disabled]="params.disabled"
+    [disabled]="params?.disabled ?? false"
     [ngClass]="{ invalid: !isValid && !params.disabled }"
-    [name]="params.name"
-    [cols]="params.cols"
-    [rows]="params.rows"
+    [name]="params?.name ?? 'c-inputtextarea'"
+    [cols]="params?.cols"
+    [rows]="params?.rows"
   ></textarea>
 </div>

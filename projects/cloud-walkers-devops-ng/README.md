@@ -29,3 +29,7 @@ Add README.MD
 ### v.0.0.4
 
 - Fix default value disabled
+
+### v.0.0.5
+
+- Fix disabled

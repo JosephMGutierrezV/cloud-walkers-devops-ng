@@ -28,7 +28,7 @@ export interface ITextAreaParams {
   hidden?: boolean;
   hiddenLabel?: boolean;
   hiddenPlaceholder?: boolean;
-  name?: string;
+  name: string;
   cols?: number;
   rows?: number;
 }

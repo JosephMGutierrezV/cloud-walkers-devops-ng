@@ -2,15 +2,15 @@
   <input
     [(ngModel)]="value"
     #cInputText
-    [ngClass]="{ invalid: !isValid && !params.disabled }"
+    [ngClass]="{ invalid: !isValid && !params?.disabled }"
     class="c-inputtext"
     type="text"
-    [disabled]="params.disabled"
+    [disabled]="params?.disabled ?? false"
   />
   <label
     [ngClass]="{
       'invalid-text': !isValid,
-      'disabled-text': params.disabled,
+      'disabled-text': params?.disabled,
       'text-write': value
     }"
     *ngIf="params?.label"

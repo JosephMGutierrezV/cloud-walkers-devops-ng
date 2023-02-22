@@ -41,6 +41,7 @@ export class CTextAreaComponent
 {
   @Input() params: ITextAreaParams = {
     disabled: false,
+    name: 'c-text-area',
   }
   @ViewChild('cTextArea') cTextArea!: ElementRef;
   @Input() set disabled(value: boolean) {
