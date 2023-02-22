@@ -12,7 +12,16 @@ Visit the [Cloud Walkers DevOps Website](https://cloud-walkers-devops.com/projec
 
 ## Version log
 
-- v 0.0.1
+### v.0.0.1
+
 Init Library
-- v 0.0.2
+
+### v.0.0.2
+
 Add README.MD
+
+### v.0.0.3
+
+- Add c-button
+- Add c-input-text
+- Add c-text-area
