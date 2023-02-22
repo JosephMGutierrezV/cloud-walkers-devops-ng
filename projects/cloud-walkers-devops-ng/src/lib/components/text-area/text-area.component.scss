@@ -2,6 +2,10 @@
   color: #ff5555;
 }
 
+.disabled-text {
+  color: #6272a4;
+}
+
 .container-text-area {
   display: flex;
   position: relative;
@@ -28,10 +32,6 @@
 
   .c-inputtextarea:disabled {
     opacity: 0.4;
-  }
-
-  .disabled-text {
-    color: #6272a4;
   }
 
   .invalid {
