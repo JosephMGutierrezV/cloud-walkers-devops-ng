@@ -39,7 +39,9 @@ import { ITextAreaParams } from '../../entities/interfaces';
 export class CTextAreaComponent
   implements ControlValueAccessor, OnDestroy, AfterViewInit, Validator
 {
-  @Input() params!: ITextAreaParams;
+  @Input() params: ITextAreaParams = {
+    disabled: false,
+  }
   @ViewChild('cTextArea') cTextArea!: ElementRef;
   @Input() set disabled(value: boolean) {
     this._disabled = value;

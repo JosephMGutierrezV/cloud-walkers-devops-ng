@@ -40,7 +40,9 @@ export class CInputTextComponent
   implements ControlValueAccessor, OnDestroy, AfterViewInit, Validator
 {
   @ViewChild('cInputText') cInputText!: ElementRef;
-  @Input() params!: IInputTextParams;
+  @Input() params: IInputTextParams = {
+    disabled: false,
+  }
   @Input() set disabled(value: boolean) {
     this._disabled = value;
   }

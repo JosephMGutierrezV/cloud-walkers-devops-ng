@@ -25,3 +25,7 @@ Add README.MD
 - Add c-button
 - Add c-input-text
 - Add c-text-area
+
+### v.0.0.4
+
+- Fix default value disabled
