@@ -26,6 +26,16 @@ export class AppComponent {
     name: 'input-text-disabled',
   };
 
+  public paramsButton = {
+    label: 'Mande su correo ya!',
+    disabled: false,
+  };
+
+  public paramsButtonDisabled = {
+    label: 'Desabilitado',
+    disabled: true,
+  };
+
   public form: FormGroup;
 
   constructor() {

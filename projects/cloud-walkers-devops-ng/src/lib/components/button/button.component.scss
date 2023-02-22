@@ -1,0 +1,62 @@
+.c-button {
+  margin: 0;
+  display: inline-flex;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  align-items: center;
+  vertical-align: bottom;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  color: #00b7eb;
+  background: #6272a4;
+  border: 0.063rem solid #00b7eb;
+  padding: 0.429rem 0.571rem;
+  font-size: 1rem;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+  border-radius: 6px;
+}
+
+.c-button:focus {
+  outline: 0 none;
+  outline-offset: 0;
+  box-shadow: 0 0 0 0.125rem #00b7eb;
+}
+
+.c-button:enabled:active {
+  background: #00b7eb;
+  color: #e0ffff;
+  border-color: #00b7eb;
+}
+
+.c-button:disabled {
+  opacity: 0.6;
+}
+
+.c-ink {
+  display: block;
+  height: 5.25rem;
+  width: 100%;
+  top: -1.328rem;
+  left: -0.219rem;
+  position: absolute;
+  background: rgba(224, 255, 255, 0.5);
+  border-radius: 100%;
+  transform: scale(0);
+}
+
+.c-ink-active {
+  animation: ripple 0.4s linear;
+}
+
+.c-ripple-disabled .p-ink {
+  display: none !important;
+}
+
+@keyframes ripple {
+  to {
+    opacity: 0;
+    transform: scale(3.5);
+  }
+}

@@ -32,3 +32,11 @@ export interface ITextAreaParams {
   cols?: number;
   rows?: number;
 }
+
+export interface IButtonParams {
+  label?: string;
+  disabled: boolean;
+  hidden?: boolean;
+  hiddenLabel?: boolean;
+  type?: string;
+}
