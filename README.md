@@ -41,3 +41,7 @@ Add README.MD
 ### v.0.0.7
 
 - Fix text area disabled
+
+### v.0.0.8
+
+- Add directive tooltip and styles
