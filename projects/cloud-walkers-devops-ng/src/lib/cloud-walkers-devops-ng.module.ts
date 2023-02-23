@@ -5,6 +5,7 @@ import { CloudWalkersDevopsNgComponent } from './cloud-walkers-devops-ng.compone
 import { CButtonComponent } from './components/button/button.component';
 import { CInputTextComponent } from './components/input-text/input-text.component';
 import { CTextAreaComponent } from './components/text-area/text-area.component';
+import { CToolTipDirective } from './directives/c-tool-tip.directive';
 import { CloudWalkersDevopsNgModuleConfig } from './entities/lib-configuration';
 
 @NgModule({
@@ -13,6 +14,7 @@ import { CloudWalkersDevopsNgModuleConfig } from './entities/lib-configuration';
     CInputTextComponent,
     CTextAreaComponent,
     CButtonComponent,
+    CToolTipDirective,
   ],
   imports: [CommonModule, FormsModule, ReactiveFormsModule],
   providers: [CloudWalkersDevopsNgModuleConfig],
@@ -21,6 +23,7 @@ import { CloudWalkersDevopsNgModuleConfig } from './entities/lib-configuration';
     CInputTextComponent,
     CTextAreaComponent,
     CButtonComponent,
+    CToolTipDirective,
   ],
 })
 export class CloudWalkersDevopsNgModule {
