@@ -50,3 +50,6 @@ Add README.MD
 
 - Fix import styles
 
+### v.0.0.10
+
+- Fix directive tooltip when is mobile

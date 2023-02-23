@@ -21,6 +21,11 @@ export class CToolTipDirective {
   }
 
   private showTooltip() {
+
+    if (window.innerWidth <= 768) {
+      return;
+    }
+
     this.tooltipElement = document.createElement('div');
     this.tooltipElement.innerText = this.text;
     this.setPosition();
