@@ -53,3 +53,7 @@ Add README.MD
 ### v.0.0.10
 
 - Fix directive tooltip when is mobile
+
+### v.0.0.11
+
+- Fix directive tooltip position responsive with scroll y

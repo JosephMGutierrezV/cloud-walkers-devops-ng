@@ -21,7 +21,6 @@ export class CToolTipDirective {
   }
 
   private showTooltip() {
-
     if (window.innerWidth <= 768) {
       return;
     }
@@ -32,6 +31,9 @@ export class CToolTipDirective {
     document.body.appendChild(this.tooltipElement);
     // Obtiene la posición del elemento de host
     const hostPosition = this.el.nativeElement.getBoundingClientRect();
+
+    // Obtiene la posición del scroll en top
+    const scrollPositionTop = window.pageYOffset;
 
     // Obtiene la posición y el tamaño del tooltip
     const tooltipPosition = this.tooltipElement.getBoundingClientRect();
@@ -67,6 +69,10 @@ export class CToolTipDirective {
     // Si el tooltip se sale del viewport abajo, mueve el tooltip arriba del elemento de host
     if (tooltipTop + tooltipPosition.height > viewportHeight) {
       tooltipTop = hostPosition.top - tooltipPosition.height - 10;
+    }
+
+    if (scrollPositionTop !== 0) {
+      tooltipTop = tooltipTop + scrollPositionTop - 10;
     }
 
     // Establece la posición del tooltip
