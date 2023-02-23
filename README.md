@@ -45,3 +45,8 @@ Add README.MD
 ### v.0.0.8
 
 - Add directive tooltip and styles
+
+### v.0.0.9
+
+- Fix import styles
+
