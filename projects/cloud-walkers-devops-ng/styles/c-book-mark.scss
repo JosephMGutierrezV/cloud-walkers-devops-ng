@@ -1,14 +1,10 @@
-.ribbon-2 {
-  --f: 0.625rem; /* control the folded part*/
-  --r: 0.938rem; /* control the ribbon shape */
-  --t: -1.5rem; /* the top offset */
-  opacity: 0.8;
+.ribbon {
+  --f: 10px; /* control the folded part*/
+  --r: 15px; /* control the ribbon shape */
+  --t: 10px; /* the top offset */
   position: absolute;
-  color: var(--color-primary-white);
-  background: var(--color-ansi-bright-blue);
-  box-shadow: 0 calc(-1 * var(--f)) 0 inset var(--color-ansi-bright-blue);
   inset: var(--t) calc(-1 * var(--f)) auto auto;
-  padding: 0 0.625rem var(--f) calc(0.625rem + var(--r));
+  padding: 0 10px var(--f) calc(10px + var(--r));
   clip-path: polygon(
     0 0,
     100% 0,
@@ -18,4 +14,8 @@
     0 calc(100% - var(--f)),
     var(--r) calc(50% - var(--f) / 2)
   );
+  background: var(--color-ansi-bright-blue);
+  box-shadow: 0 calc(-1 * var(--f)) 0 inset var(--color-ansi-bright-blue);
+  opacity: 0.8;
+  color: var(--color-primary-white);
 }

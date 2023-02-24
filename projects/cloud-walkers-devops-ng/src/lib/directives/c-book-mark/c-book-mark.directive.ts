@@ -1,26 +1,32 @@
-import { Directive, ElementRef, Renderer2 } from '@angular/core';
+import { Directive, ElementRef, Input, Renderer2 } from '@angular/core';
 
 @Directive({
   selector: '[cBookMark]',
 })
 export class CBookMarkDirective {
+  @Input() cBookMark: string = ''; // texto para el contenido de la cinta
 
-  constructor(private el: ElementRef, private renderer: Renderer2) {
-    this.createRibbon();
-    this.addText();
+  constructor(private elRef: ElementRef, private renderer: Renderer2) {}
+
+  ngOnInit() {
+    const ribbon = this.createRibbon(this.cBookMark);
+    this.renderer.insertBefore(
+      this.elRef.nativeElement.parentNode,
+      ribbon,
+      this.elRef.nativeElement
+    );
   }
 
-  private createRibbon() {
+  private createRibbon(content: string): HTMLElement {
     const ribbon = this.renderer.createElement('div');
-    this.renderer.addClass(ribbon, 'ribbon-2');
-    this.renderer.appendChild(this.el.nativeElement, ribbon);
-  }
+    this.renderer.addClass(ribbon, 'ribbon');
 
-  private addText() {
-    const ribbon = this.el.nativeElement.querySelector('.ribbon-2');
-    const text = this.renderer.createElement('samp');
-    const textNode = this.renderer.createText('Texto de la cinta');
-    this.renderer.appendChild(text, textNode);
-    this.renderer.appendChild(ribbon, text);
+    const ribbonContent = this.renderer.createElement('span');
+    this.renderer.addClass(ribbonContent, 'ribbon-content');
+    this.renderer.setProperty(ribbonContent, 'innerHTML', content);
+
+    this.renderer.appendChild(ribbon, ribbonContent);
+
+    return ribbon;
   }
 }

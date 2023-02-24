@@ -57,3 +57,7 @@ Add README.MD
 ### v.0.0.11
 
 - Fix directive tooltip position responsive with scroll y
+
+### v.0.0.12
+
+- Add directive bookMark
