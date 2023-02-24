@@ -9,4 +9,5 @@ export * from './lib/entities/lib-configuration';
 export * from './lib/components/input-text/input-text.component';
 export * from './lib/components/text-area/text-area.component';
 export * from './lib/components/button/button.component';
-export * from './lib/directives/c-tool-tip.directive';
+export * from './lib/directives/c-tool-tip/c-tool-tip.directive';
+export * from './lib/directives/c-book-mark/c-book-mark.directive';
