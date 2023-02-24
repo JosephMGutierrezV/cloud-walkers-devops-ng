@@ -61,3 +61,7 @@ Add README.MD
 ### v.0.0.12
 
 - Add directive bookMark
+
+### v.0.0.13
+
+- Fix directive bookMark with changes

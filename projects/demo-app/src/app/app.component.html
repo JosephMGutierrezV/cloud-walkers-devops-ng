@@ -1,5 +1,5 @@
 <form [formGroup]="form" class="card-container">
-  <div class="row" cBookMark="Esta es la cinta de arriba por fin funciona">
+  <div class="row" cBookMark="{{ title }}">
     <div class="col-6 mt-5" cTooltip="Este es un tooltip para un div">
       <c-input-text
         formControlName="email"
@@ -44,14 +44,14 @@
       cTooltip="Este es un tooltip para un div"
       cToolTipPosition="bottom"
     >
-      <c-button [params]="paramsButton"></c-button>
+      <c-button (onClick)="click()" [params]="paramsButton"></c-button>
     </div>
     <div
       class="col-6 mt-5"
       cTooltip="Este es un tooltip para un div"
       cToolTipPosition="bottom"
     >
-      <c-button [params]="paramsButtonDisabled"></c-button>
+      <c-button (onClick)="click()" [params]="paramsButtonDisabled"></c-button>
     </div>
   </div>
 </form>

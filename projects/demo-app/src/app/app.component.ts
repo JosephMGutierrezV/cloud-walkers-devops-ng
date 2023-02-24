@@ -8,6 +8,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class AppComponent {
   public title = 'demo-app';
+
   public paramsInputText = {
     label: 'Input Text',
     helpText: 'This is a help text',
@@ -45,5 +46,11 @@ export class AppComponent {
       subject: new FormControl('', [Validators.required]),
       message: new FormControl('', [Validators.required]),
     });
+  }
+
+  click() {
+    // generate randon text
+    const randomText = Math.random().toString(36).substring(7);
+    this.title = randomText;
   }
 }
