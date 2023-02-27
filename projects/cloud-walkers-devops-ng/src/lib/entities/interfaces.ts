@@ -40,3 +40,18 @@ export interface IButtonParams {
   hiddenLabel?: boolean;
   type?: string;
 }
+
+export interface IMessage {
+  severity?: string;
+  summary?: string;
+  detail?: string;
+  id?: any;
+  key?: string;
+  life?: number;
+  sticky?: boolean;
+  closable?: boolean;
+  data?: any;
+  icon?: string;
+  contentStyleClass?: string;
+  styleClass?: string;
+}

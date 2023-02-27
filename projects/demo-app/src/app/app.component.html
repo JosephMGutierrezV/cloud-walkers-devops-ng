@@ -6,52 +6,13 @@
         [params]="paramsInputText"
       ></c-input-text>
     </div>
-    <div class="col-6 mt-5" cTooltip="Este es un tooltip para un div">
-      <c-input-text
-        formControlName="name"
-        [params]="paramsInputTextDisabled"
-      ></c-input-text>
-    </div>
     <div
-      class="col-12 mt-5"
-      cTooltip="Este es un tooltip para un div"
-      cToolTipPosition="bottom"
-    >
-      <c-input-text
-        formControlName="subject"
-        [params]="paramsInputText"
-      ></c-input-text>
-    </div>
-    <div
-      class="col-6 mt-5"
-      cTooltip="Este es un tooltip para un div"
-      cToolTipPosition="bottom"
-    >
-      <c-text-area [params]="paramsInputTextDisabled"></c-text-area>
-    </div>
-    <div
-      class="col-6 mt-5"
-      cTooltip="Este es un tooltip para un div"
-      cToolTipPosition="bottom"
-    >
-      <c-text-area
-        formControlName="message"
-        [params]="paramsInputText"
-      ></c-text-area>
-    </div>
-    <div
-      class="col-6 mt-5"
+      class="col-12 mt-5 mb-5"
       cTooltip="Este es un tooltip para un div"
       cToolTipPosition="bottom"
     >
       <c-button (onClick)="click()" [params]="paramsButton"></c-button>
     </div>
-    <div
-      class="col-6 mt-5"
-      cTooltip="Este es un tooltip para un div"
-      cToolTipPosition="bottom"
-    >
-      <c-button (onClick)="click()" [params]="paramsButtonDisabled"></c-button>
-    </div>
   </div>
 </form>
+<c-toast position="top-center"></c-toast>

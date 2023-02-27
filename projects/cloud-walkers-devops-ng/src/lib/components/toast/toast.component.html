@@ -1,0 +1,21 @@
+<div
+  #container
+  [ngClass]="'c-toast  c-toast-' + position"
+  [ngStyle]="style"
+  [class]="styleClass"
+>
+  <c-toast-item
+    *ngFor="let msg of messages; let i = index"
+    [message]="msg"
+    [index]="i"
+    (onClose)="onMessageClose($event)"
+    [template]="template"
+    @toastAnimation
+    (@toastAnimation.start)="onAnimationStart($event)"
+    (@toastAnimation.done)="onAnimationEnd($event)"
+    [showTransformOptions]="showTransformOptions"
+    [hideTransformOptions]="hideTransformOptions"
+    [showTransitionOptions]="showTransitionOptions"
+    [hideTransitionOptions]="hideTransitionOptions"
+  ></c-toast-item>
+</div>

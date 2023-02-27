@@ -1,0 +1,56 @@
+<div
+  #container
+  [attr.id]="message.id"
+  [class]="message?.styleClass ?? ''"
+  [ngClass]="['c-toast-message-' + message.severity, 'c-toast-message']"
+  [@messageState]="{
+    value: 'visible',
+    params: {
+      showTransformParams: showTransformOptions,
+      hideTransformParams: hideTransformOptions,
+      showTransitionParams: showTransitionOptions,
+      hideTransitionParams: hideTransitionOptions
+    }
+  }"
+  (mouseenter)="onMouseEnter()"
+  (mouseleave)="onMouseLeave()"
+>
+  <div
+    class="c-toast-message-content"
+    role="alert"
+    aria-live="assertive"
+    aria-atomic="true"
+    [ngClass]="message.contentStyleClass"
+  >
+    <ng-container *ngIf="!template">
+      <span
+        [class]="
+          'c-toast-message-icon pi' + (message.icon ? ' ' + message.icon : '')
+        "
+        [ngClass]="{
+          'pi-info-circle': message.severity == 'info',
+          'pi-exclamation-triangle': message.severity == 'warn',
+          'pi-times-circle': message.severity == 'error',
+          'pi-check': message.severity == 'success'
+        }"
+      ></span>
+      <div class="c-toast-message-text">
+        <div class="c-toast-summary">{{ message.summary }}</div>
+        <div class="c-toast-detail">{{ message.detail }}</div>
+      </div>
+    </ng-container>
+    <ng-container
+      *ngTemplateOutlet="template; context: { $implicit: message }"
+    ></ng-container>
+    <button
+      type="button"
+      class="c-toast-icon-close p-link"
+      (click)="onCloseIconClick($event)"
+      (keydown.enter)="onCloseIconClick($event)"
+      *ngIf="message.closable !== false"
+      pRipple
+    >
+      <span class="c-toast-icon-close-icon pi pi-times"></span>
+    </button>
+  </div>
+</div>

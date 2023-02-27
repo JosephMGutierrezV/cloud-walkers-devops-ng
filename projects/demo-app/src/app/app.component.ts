@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { MessageService } from 'cloud-walkers-devops-ng';
 
 @Component({
   selector: 'app-root',
@@ -39,7 +40,7 @@ export class AppComponent {
 
   public form: FormGroup;
 
-  constructor() {
+  constructor(private readonly messageService: MessageService) {
     this.form = new FormGroup({
       email: new FormControl('', [Validators.email, Validators.required]),
       name: new FormControl('', [Validators.required]),
@@ -52,5 +53,11 @@ export class AppComponent {
     // generate randon text
     const randomText = Math.random().toString(36).substring(7);
     this.title = randomText;
+    this.messageService.add({
+      severity: 'error',
+      summary: 'Rechazado',
+      detail: 'Pago rechazado, intente con otro medio de pago',
+      life: 5000,
+    });
   }
 }
