@@ -1,6 +1,7 @@
 <button
   [disabled]="params?.disabled ?? false"
   class="c-button"
+  [ngClass]="{ 'c-button-invalid': params?.invalid }"
   type="button"
   (click)="eventHandlerClick()"
 >

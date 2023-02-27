@@ -54,6 +54,12 @@
   display: none !important;
 }
 
+.c-button-invalid {
+  color: #e0ffff;
+  background: #6272a4;
+  border-color: #e0ffff;
+}
+
 @keyframes ripple {
   to {
     opacity: 0;

@@ -31,6 +31,7 @@ export class AppComponent {
   public paramsButton = {
     label: 'Mande su correo ya!',
     disabled: false,
+    invalid: false,
   };
 
   public paramsButtonDisabled = {
@@ -53,11 +54,14 @@ export class AppComponent {
     // generate randon text
     const randomText = Math.random().toString(36).substring(7);
     this.title = randomText;
+
     this.messageService.add({
-      severity: 'error',
-      summary: 'Rechazado',
-      detail: 'Pago rechazado, intente con otro medio de pago',
-      life: 5000,
+      severity: 'success',
+      summary: 'Success',
+      detail: 'Message Content',
+      life: 100000000000,
     });
+
+    this.paramsButton.invalid = !this.paramsButton.invalid;
   }
 }

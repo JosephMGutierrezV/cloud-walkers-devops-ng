@@ -39,6 +39,7 @@ export interface IButtonParams {
   hidden?: boolean;
   hiddenLabel?: boolean;
   type?: string;
+  invalid?: boolean;
 }
 
 export interface IMessage {

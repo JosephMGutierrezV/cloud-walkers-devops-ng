@@ -28,10 +28,7 @@
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "tsConfig": "projects/cloud-walkers-devops-ng/tsconfig.spec.json",
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ]
+            "polyfills": ["zone.js", "zone.js/testing"]
           }
         }
       }
@@ -53,9 +50,7 @@
             "outputPath": "dist/demo-app",
             "index": "projects/demo-app/src/index.html",
             "main": "projects/demo-app/src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
             "tsConfig": "projects/demo-app/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
@@ -63,7 +58,8 @@
               "projects/demo-app/src/assets"
             ],
             "styles": [
-              "projects/demo-app/src/styles.scss"
+              "projects/demo-app/src/styles.scss",
+              "node_modules/primeicons/primeicons.css"
             ],
             "scripts": []
           },
@@ -115,19 +111,14 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
+            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "projects/demo-app/tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
             "assets": [
               "projects/demo-app/src/favicon.ico",
               "projects/demo-app/src/assets"
             ],
-            "styles": [
-              "projects/demo-app/src/styles.scss"
-            ],
+            "styles": ["projects/demo-app/src/styles.scss"],
             "scripts": []
           }
         }
