@@ -35,11 +35,9 @@ export interface ITextAreaParams {
 
 export interface IButtonParams {
   label?: string;
-  disabled: boolean;
   hidden?: boolean;
   hiddenLabel?: boolean;
   type?: string;
-  invalid?: boolean;
 }
 
 export interface IMessage {

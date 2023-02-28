@@ -7,10 +7,12 @@ import { IButtonParams } from '../../entities/interfaces';
   styleUrls: ['./button.component.scss'],
 })
 export class CButtonComponent {
-  @Input() params: IButtonParams = {
-    disabled: false,
-  };
+  @Input() params!: IButtonParams;
+  @Input() disabled = false;
+  @Input() invalid = false;
+
   @Output() onClick = new EventEmitter();
+
   public isClicked = false;
 
   constructor() {}
