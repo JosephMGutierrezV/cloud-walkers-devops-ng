@@ -12,6 +12,27 @@
       cToolTipPosition="bottom"
     >
       <c-button (onClick)="click()" [params]="paramsButton"></c-button>
+
+      <c-button
+        (onClick)="click()"
+        [params]="{
+          label: 'apk'
+        }"
+      ></c-button>
+
+      <c-button
+        (onClick)="click()"
+        [params]="{
+          label: 'Repositorio'
+        }"
+      ></c-button>
+
+      <c-button
+      (onClick)="click()"
+      [params]="{
+        label: 'Visitar'
+      }"
+    ></c-button>
     </div>
   </div>
 </form>
