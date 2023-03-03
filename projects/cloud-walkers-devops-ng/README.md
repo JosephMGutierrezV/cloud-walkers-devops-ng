@@ -79,3 +79,7 @@ Add README.MD
 ### v.0.0.16
 
 - Set size min defaul button
+
+### v.0.0.17
+
+- Validation label button

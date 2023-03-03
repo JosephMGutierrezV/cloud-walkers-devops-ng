@@ -5,6 +5,6 @@
   type="button"
   (click)="eventHandlerClick()"
 >
-  <span> {{ params.label }} </span>
+  <span> {{ params?.label }} </span>
   <span class="c-ink" [ngClass]="{ 'c-ink-active': isClicked }"></span>
 </button>
