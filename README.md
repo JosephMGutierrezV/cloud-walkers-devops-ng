@@ -75,3 +75,7 @@ Add README.MD
 ### v.0.0.15
 
 - Fix disanbled and invalid button
+
+### v.0.0.16
+
+- Set size min defaul button
