@@ -1,0 +1,91 @@
+@import "./c-colors.scss";
+
+@mixin backlight($x, $y, $spread, $size, $colorA, $colorB, $duration) {
+  &:after {
+    position: absolute;
+    content: "";
+    top: $y;
+    left: $x;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale($size);
+    -webkit-filter: blur($spread);
+    -moz-filter: blur($spread);
+    -ms-filter: blur($spread);
+    filter: blur($spread);
+    background: linear-gradient(270deg, $colorA, $colorB);
+    background-size: 200% 200%;
+    animation: animateGlow $duration ease infinite;
+
+    @keyframes animateGlow {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  }
+}
+
+.c-box-back-glow {
+  position: relative;
+  width: 100%;
+  border-radius: 0.75rem;
+  padding: 0.875rem 0.75rem;
+  box-sizing: border-box;
+  color: var(--cw-color-primary-white);
+  background-color: var(--cw-color-secondary-dark);
+  box-shadow: 0 0.125rem 0.25rem var(--cw-color-tertiary-dark);
+  animation: textColor 10s ease infinite;
+  @include backlight(0, 2.5vw, 5vw, 0.9, var(--cw-color-primary-dark), var(--cw-color-tertiary-dark), 10s);
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--cw-color-primary-dark);
+    animation: textColorTitle 10s ease infinite;
+  }
+
+  @keyframes textColor {
+    0% {
+      color: var(--cw-color-primary-white);
+    }
+    50% {
+      color: var(--cw-color-tertiary-white);
+    }
+    100% {
+      color: var(--cw-color-primary-white);
+    }
+  }
+
+  @keyframes textColorTitle {
+    0% {
+      color: var(--cw-color-primary-dark);
+    }
+    50% {
+      color: var(--cw-color-tertiary-dark);
+    }
+    100% {
+      color: var(--cw-color-primary-dark);
+    }
+  }
+}
+
+.c-card-box-shadow {
+  background-color: var(--cw-color-box-shadow);
+  border-radius: 0.75rem;
+  padding: 0.875rem 0.75rem;
+  box-sizing: border-box;
+  width: 100%;
+  box-shadow: 0 0.125rem 0.25rem var(--cw-color-tertiary-dark);
+}
