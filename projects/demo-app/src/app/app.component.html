@@ -1,39 +1,33 @@
-<form [formGroup]="form" class="card-container">
-  <div class="row" cBookMark="{{ title }}">
-    <div class="col-6 mt-5" cTooltip="Este es un tooltip para un div">
-      <c-input-text
-        formControlName="email"
-        [params]="paramsInputText"
-      ></c-input-text>
-    </div>
-    <div
-      class="col-12 mt-5 mb-5"
-      cTooltip="Este es un tooltip para un div"
-      cToolTipPosition="bottom"
-    >
-      <c-button (onClick)="click()" [params]="paramsButton"></c-button>
+<section class="main-wraper">
+  <header>
+    <h1>My Website</h1>
+  </header>
 
-      <c-button
-        (onClick)="click()"
-        [params]="{
-          label: 'apk'
-        }"
-      ></c-button>
+  <nav>
+    <ul>
+      <li>
+        <a href="#">Colores</a>
+      </li>
+      <li>
+        <a href="#">Botones</a>
+      </li>
+      <li>
+        <a href="#">Input</a>
+      </li>
+      <li>
+        <a href="#">Text area</a>
+      </li>
+      <li>
+        <a href="#">Directivas</a>
+      </li>
+    </ul>
+  </nav>
 
-      <c-button
-        (onClick)="click()"
-        [params]="{
-          label: 'Repositorio'
-        }"
-      ></c-button>
-
-      <c-button
-      (onClick)="click()"
-      [params]="{
-        label: 'Visitar'
-      }"
-    ></c-button>
-    </div>
-  </div>
-</form>
-<c-toast position="top-center"></c-toast>
+  <main>
+    <c-youtube-player
+      [videoId]="
+        'https://www.youtube.com/watch?v=KVjBCT2Lc94&list=RDw5VOUynJHf0&index=15'
+      "
+    ></c-youtube-player>
+  </main>
+</section>

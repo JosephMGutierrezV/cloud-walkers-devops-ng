@@ -17,3 +17,4 @@ export * from './lib/services/message/message.service';
 export * from './lib/utils/unique-id.utils';
 export * from './lib/utils/z-index.utils';
 export * from './lib/utils/object.utils';
+export * from './lib/components/youtube-player/youtube-player.component';

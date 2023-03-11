@@ -1,0 +1,33 @@
+$primary-dark: #00b7eb;
+$primary-white: #e0ffff;
+$secondary-dark: #0f171f;
+$secondary-white: #292f36;
+$tertiary-dark: #6272a4;
+$tertiary-white: #d6acff;
+$quaternary-dark: #ff79c6;
+$quaternary-white: #ff92df;
+$quinary-dark: #69ff94;
+$quinary-white: #50fa7b;
+$senary-dark: #f1fa8c;
+$senary-white: #ffffa5;
+$box-shadow: rgba(255, 255, 255, 0.05);
+$success: #acfffa;
+$danger: #ff5555;
+
+:root {
+  --cw-color-primary-dark: #{$primary-dark};
+  --cw-color-primary-white: #{$primary-white};
+  --cw-color-secondary-dark: #{$secondary-dark};
+  --cw-color-secondary-white: #{$secondary-white};
+  --cw-color-tertiary-dark: #{$tertiary-dark};
+  --cw-color-tertiary-white: #{$tertiary-white};
+  --cw-color-quaternary-dark: #{$quaternary-dark};
+  --cw-color-quaternary-white: #{$quaternary-white};
+  --cw-color-quinary-dark: #{$quinary-dark};
+  --cw-color-quinary-white: #{$quinary-white};
+  --cw-color-senary-dark: #{$senary-dark};
+  --cw-color-senary-white: #{$senary-white};
+  --cw-color-box-shadow: #{$box-shadow};
+  --cw-color-success: #{$success};
+  --cw-color-danger: #{$danger};
+}

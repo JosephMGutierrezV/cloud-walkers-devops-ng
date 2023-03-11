@@ -1,3 +1,31 @@
-form {
-  position: relative;
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.main-wraper {
+  display: grid;
+  grid-template-columns: 200px auto;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header header"
+    "sidebar main";
+
+  header {
+    grid-area: header;
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+  }
+
+  nav {
+    grid-area: sidebar;
+    background-color: #ccc;
+    padding: 1em;
+  }
+
+  main {
+    grid-area: main;
+    padding: 1em;
+  }
 }
