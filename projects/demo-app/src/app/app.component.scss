@@ -1,15 +1,19 @@
 body {
   margin: 0;
   padding: 0;
+  min-height: 100%;
 }
 
 .main-wraper {
   display: grid;
+  min-width: 100%;
+  min-height: 100vh;
   grid-template-columns: 200px auto;
-  grid-template-rows: auto;
+  grid-template-rows: auto 1fr auto;
   grid-template-areas:
     "header header"
-    "sidebar main";
+    "sidebar main"
+    "footer footer";
 
   header {
     grid-area: header;
@@ -22,10 +26,18 @@ body {
     grid-area: sidebar;
     background-color: #ccc;
     padding: 1em;
+    height: 100%;
   }
 
   main {
     grid-area: main;
+    padding: 1em;
+  }
+
+  footer {
+    grid-area: footer; /* Definimos el área del footer */
+    background-color: #333;
+    color: #fff;
     padding: 1em;
   }
 }

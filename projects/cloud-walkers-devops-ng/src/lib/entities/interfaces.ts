@@ -54,3 +54,12 @@ export interface IMessage {
   contentStyleClass?: string;
   styleClass?: string;
 }
+
+export interface IGalleryImageParams {
+  src: string;
+  icon?: string;
+  img?: string;
+  alt?: string;
+  infoMain: string;
+  infoSub: string;
+}

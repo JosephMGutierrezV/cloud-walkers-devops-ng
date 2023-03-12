@@ -12,6 +12,7 @@ import { CToastComponent } from './components/toast/toast.component';
 import { CToastItemComponent } from './components/toast/toast-item/toast-item.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CYoutubePlayerComponent } from './components/youtube-player/youtube-player.component';
+import { CImageGalleryComponent } from './components/image-gallery/image-gallery.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { CYoutubePlayerComponent } from './components/youtube-player/youtube-pla
     CToastItemComponent,
     CToastComponent,
     CYoutubePlayerComponent,
+    CImageGalleryComponent,
   ],
   imports: [
     CommonModule,
@@ -42,6 +44,7 @@ import { CYoutubePlayerComponent } from './components/youtube-player/youtube-pla
     CToastItemComponent,
     CToastComponent,
     CYoutubePlayerComponent,
+    CImageGalleryComponent,
   ],
 })
 export class CloudWalkersDevopsNgModule {

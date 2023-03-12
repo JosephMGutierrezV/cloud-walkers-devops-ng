@@ -44,7 +44,7 @@
   background-color: var(--cw-color-secondary-dark);
   box-shadow: 0 0.125rem 0.25rem var(--cw-color-tertiary-dark);
   animation: textColor 10s ease infinite;
-  @include backlight(0, 2.5vw, 5vw, 0.9, var(--cw-color-primary-dark), var(--cw-color-tertiary-dark), 10s);
+  @include backlight(0, 2.5vw, 5vw, 0.825, var(--cw-color-primary-dark), var(--cw-color-tertiary-dark), 10s);
 
   h1,
   h2,

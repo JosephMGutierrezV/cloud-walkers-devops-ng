@@ -1,0 +1,23 @@
+<section class="wrapper-gallery">
+  <div class="options">
+    <div
+      *ngFor="let item of params; let indice = index"
+      class="option"
+      [style]="item?.src"
+      (click)="setActive(indice)"
+      [class.active]="indice === activeIndex"
+    >
+      <div class="shadow"></div>
+      <div class="label">
+        <div class="icon">
+          <img [src]="item?.img" *ngIf="item?.img" [alt]="item?.alt" />
+          <i *ngIf="item?.icon" [class]="item?.icon"></i>
+        </div>
+        <div class="info">
+          <div class="main">{{ item?.infoMain }}</div>
+          <div class="sub">{{ item?.infoSub }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
