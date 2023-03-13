@@ -1,0 +1,33 @@
+pre {
+  position: relative;
+  background-color: var(--cw-color-secondary-white);
+  color: var(--cw-color-secondary-dark);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px var(--cw-color-box-shadow);
+  code {
+    outline: none;
+    color: var(--cw-color-tertiary-dark);
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  button {
+    position: absolute;
+    right: 0.938rem;
+    top: 0.938rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: var(--cw-color-tertiary-dark);
+    color: var(--cw-color-secondary-dark);
+    padding: 0.25rem 0.5rem;
+    z-index: 1;
+  }
+  code:before,
+  code:after {
+    content: var(--option-icon);
+  }
+}

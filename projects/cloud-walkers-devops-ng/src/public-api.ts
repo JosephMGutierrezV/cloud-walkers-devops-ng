@@ -19,3 +19,4 @@ export * from './lib/utils/z-index.utils';
 export * from './lib/utils/object.utils';
 export * from './lib/components/youtube-player/youtube-player.component';
 export * from './lib/components/image-gallery/image-gallery.component';
+export * from './lib/components/code-box/code-box.component';

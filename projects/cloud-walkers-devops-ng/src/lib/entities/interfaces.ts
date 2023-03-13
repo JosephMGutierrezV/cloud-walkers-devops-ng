@@ -63,3 +63,9 @@ export interface IGalleryImageParams {
   infoMain: string;
   infoSub: string;
 }
+
+export interface ICodeBoxParams {
+  code: string;
+  contentAfterBefore: string;
+  contentEditable: boolean;
+}

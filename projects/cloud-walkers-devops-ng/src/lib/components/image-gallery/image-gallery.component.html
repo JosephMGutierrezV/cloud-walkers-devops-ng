@@ -3,7 +3,7 @@
     <div
       *ngFor="let item of params; let indice = index"
       class="option"
-      [style]="item?.src"
+      [style]="setStyleImg(item.src)"
       (click)="setActive(indice)"
       [class.active]="indice === activeIndex"
     >

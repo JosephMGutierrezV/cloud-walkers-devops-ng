@@ -18,4 +18,10 @@ export class CImageGalleryComponent implements OnInit {
   setActive(index: number) {
     this.activeIndex = index;
   }
+
+  setStyleImg(img: string) {
+    return {
+      '--optionBackground': `url(${img})`,
+    };
+  }
 }
