@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import {
+  ETypeCode,
+  ETypeItemCode,
+} from 'projects/cloud-walkers-devops-ng/src/lib/entities/enums';
 
 @Component({
   selector: 'app-root',
@@ -40,4 +44,52 @@ export class AppComponent {
       infoSub: 'Monstro',
     },
   ];
+
+  public codeBoxParams = {
+    contentEditable: true,
+    iconCopy: 'pi pi-copy',
+    contentAfterBefore: 'This is content before the code box',
+    textCopy: 'Copy',
+    code: {
+      type: ETypeCode.HTML,
+      content: [
+        {
+          type: ETypeItemCode.TAG_OPEN,
+          data: '<div>',
+        },
+        {
+          type: ETypeItemCode.TAG_OPEN,
+          data: '<h1>',
+        },
+        {
+          type: ETypeItemCode.CONTENT,
+          data: 'This is a heading',
+        },
+        {
+          type: ETypeItemCode.COMMENT,
+          data: '<!-- aca este es un comentario -->',
+        },
+        {
+          type: ETypeItemCode.TAG_OPEN,
+          data: '<p>',
+        },
+        {
+          type: ETypeItemCode.CONTENT,
+          data: 'This is a paragraph',
+        },
+        {
+          type: ETypeItemCode.TAG_CLOSE,
+          data: '</p>',
+        },
+        {
+          type: ETypeItemCode.TAG_CLOSE,
+          data: '</h1>',
+        },
+        {
+          type: ETypeItemCode.TAG_CLOSE,
+          data: '</div>',
+        },
+      ],
+    },
+  };
 }

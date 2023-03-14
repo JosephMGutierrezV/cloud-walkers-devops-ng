@@ -1,10 +1,19 @@
-<pre>
-  <button>
-    <i class="pi pi-copy"></i>
-  </button>
+<pre
+  [ngClass]="{
+    'shake-horizontal': isCopied,
+    copied: isCopied
+  }"
+>
+  <div class="container-button"  [cTooltip]="textTooltip" cToolTipPosition="bottom">
+    <button (click)="copyToClipboard()">
+      <i  [class]="params?.iconCopy"></i>
+    </button>
+  </div>
   <code
-   [contentEditable]="params.contentEditable"
+   [contentEditable]="params?.contentEditable"
    [style]="setContentBeforeAfter()">
-    {{ params?.code }}
+   <span [ngClass]="params?.code?.type + ' ' + item?.type " *ngFor="let item of params?.code?.content">
+      {{getContentWithTabs(item, params.code!.type )}}
+  </span>
   </code>
 </pre>

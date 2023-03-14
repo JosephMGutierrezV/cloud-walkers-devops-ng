@@ -14,6 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CYoutubePlayerComponent } from './components/youtube-player/youtube-player.component';
 import { CImageGalleryComponent } from './components/image-gallery/image-gallery.component';
 import { CCodeBoxComponent } from './components/code-box/code-box.component';
+import { Clipboard } from '@angular/cdk/clipboard';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,7 @@ import { CCodeBoxComponent } from './components/code-box/code-box.component';
     ReactiveFormsModule,
     BrowserAnimationsModule,
   ],
-  providers: [CloudWalkersDevopsNgModuleConfig],
+  providers: [CloudWalkersDevopsNgModuleConfig, Clipboard],
   exports: [
     CloudWalkersDevopsNgComponent,
     CInputTextComponent,

@@ -1,5 +1,4 @@
 pre {
-  position: relative;
   background-color: var(--cw-color-secondary-white);
   color: var(--cw-color-secondary-dark);
   border-radius: 8px;
@@ -12,22 +11,328 @@ pre {
     padding: 4px 8px;
     font-size: 14px;
     font-weight: bold;
+
+    .html.tag-open {
+      color: var(--cw-color-quaternary-white);
+    }
+
+    .html.tag-close {
+      color: var(--cw-color-quaternary-white);
+    }
+
+    .html.attribute,
+    .html.attribute-value {
+      color: var(--cw-color-quinary-dark);
+    }
+
+    .html.comment {
+      color: var(--cw-color-senary-dark);
+    }
+
+    .html.string {
+      color: var(--cw-color-tertiary-white);
+    }
+
+    .html.number {
+      color: var(--cw-color-quinary-white);
+    }
+
+    .html.operator,
+    .html.punctuation {
+      color: var(--cw-color-senary-dark);
+    }
+
+    .css.property {
+      color: var(--cw-color-tertiary-dark);
+    }
+
+    .css.boolean {
+      color: var(--cw-color-quinary-dark);
+    }
+
+    .css.function {
+      color: var(--cw-color-quaternary-dark);
+    }
+
+    .css.variable {
+      color: var(--cw-color-tertiary-dark);
+    }
+
+    .css.operator,
+    .css.punctuation {
+      color: var(--cw-color-senary-dark);
+    }
+
+    .css.class {
+      color: var(--cw-color-quaternary-white);
+    }
+
+    .css.parameter {
+      color: var(--cw-color-quinary-white);
+    }
+
+    .json.attribute {
+      color: var(--cw-color-tertiary-dark);
+    }
+
+    .json.attribute-value {
+      color: var(--cw-color-tertiary-white);
+    }
+
+    .json.punctuation {
+      color: var(--cw-color-senary-dark);
+    }
+
+    .json.tag {
+      color: var(--cw-color-quaternary-white);
+    }
+
+    .json.string {
+      color: var(--cw-color-tertiary-white);
+    }
+
+    .json.number {
+      color: var(--cw-color-quinary-white);
+    }
+
+    .xml.attribute {
+      color: var(--cw-color-tertiary-dark);
+    }
+
+    .xml.attribute-value {
+      color: var(--cw-color-tertiary-white);
+    }
+
+    .xml.punctuation {
+      color: var(--cw-color-senary-dark);
+    }
+
+    .xml.tag {
+      color: var(--cw-color-quaternary-white);
+    }
+
+    .xml.string {
+      color: var(--cw-color-tertiary-white);
+    }
+
+    .xml.number {
+      color: var(--cw-color-quinary-white);
+    }
+
+    .sql.keyword {
+      color: var(--cw-color-quaternary-dark);
+    }
+
+    .sql.string {
+      color: var(--cw-color-tertiary-white);
+    }
+
+    .sql.number {
+      color: var(--cw-color-quinary-white);
+    }
+
+    .sql.operator,
+    .sql.punctuation {
+      color: var(--cw-color-senary-dark);
+    }
+
+    .java.keyword {
+      color: var(--cw-color-quaternary-dark);
+    }
+
+    .java.string {
+      color: var(--cw-color-tertiary-white);
+    }
+
+    .java.number {
+      color: var(--cw-color-quinary-white);
+    }
+
+    .java.operator,
+    .java.punctuation {
+      color: var(--cw-color-senary-dark);
+    }
+
+    .java.class {
+      color: var(--cw-color-quaternary-white);
+    }
+
+    .java.function {
+      color: var(--cw-color-quaternary-dark);
+    }
+
+    .java.variable {
+      color: var(--cw-color-tertiary-dark);
+    }
+
+    .csharp.keyword {
+      color: var(--cw-color-quaternary-dark);
+    }
+
+    .csharp.string {
+      color: var(--cw-color-tertiary-white);
+    }
+
+    .csharp.number {
+      color: var(--cw-color-quinary-white);
+    }
+
+    .csharp.operator,
+    .csharp.punctuation {
+      color: var(--cw-color-senary-dark);
+    }
+
+    .csharp.class {
+      color: var(--cw-color-quaternary-white);
+    }
+
+    .csharp.function {
+      color: var(--cw-color-quaternary-dark);
+    }
+
+    .csharp.variable {
+      color: var(--cw-color-tertiary-dark);
+    }
+
+    .python.keyword {
+      color: var(--cw-color-quaternary-dark);
+    }
+
+    .python.string {
+      color: var(--cw-color-tertiary-white);
+    }
+
+    .python.number {
+      color: var(--cw-color-quinary-white);
+    }
+
+    .python.operator,
+    .python.punctuation {
+      color: var(--cw-color-senary-dark);
+    }
+
+    .python.class {
+      color: var(--cw-color-quaternary-white);
+    }
+
+    .python.function {
+      color: var(--cw-color-quaternary-dark);
+    }
+
+    .python.variable {
+      color: var(--cw-color-tertiary-dark);
+    }
+
+    .markdown.tag {
+      color: var(--cw-color-quaternary-dark);
+    }
+
+    .markdown.string {
+      color: var(--cw-color-tertiary-white);
+    }
+
+    .markdown.number {
+      color: var(--cw-color-quinary-white);
+    }
+
+    .markdown.operator,
+    .markdown.punctuation {
+      color: var(--cw-color-senary-dark);
+    }
   }
-  button {
-    position: absolute;
-    right: 0.938rem;
-    top: 0.938rem;
+
+  .container-button {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
-    background-color: var(--cw-color-tertiary-dark);
-    color: var(--cw-color-secondary-dark);
-    padding: 0.25rem 0.5rem;
-    z-index: 1;
+    width: 3.6rem;
+    height: 2.188rem;
+    margin: 0;
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      background-color: var(--cw-color-tertiary-dark);
+      color: var(--cw-color-secondary-dark);
+      padding: 0.25rem 0.5rem;
+      z-index: 1;
+    }
   }
+
   code:before,
   code:after {
     content: var(--option-icon);
+  }
+}
+
+.copied {
+  code {
+    color: var(--cw-color-secondary-dark);
+    background-color: var(--cw-color-tertiary-dark);
+  }
+}
+
+.shake-horizontal {
+  -webkit-animation: shake-horizontal 1.4s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+  animation: shake-horizontal 1.4s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+}
+
+@-webkit-keyframes shake-horizontal {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+  80% {
+    -webkit-transform: translateX(8px);
+    transform: translateX(8px);
+  }
+  90% {
+    -webkit-transform: translateX(-8px);
+    transform: translateX(-8px);
+  }
+}
+
+@keyframes shake-horizontal {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+  80% {
+    -webkit-transform: translateX(8px);
+    transform: translateX(8px);
+  }
+  90% {
+    -webkit-transform: translateX(-8px);
+    transform: translateX(-8px);
   }
 }

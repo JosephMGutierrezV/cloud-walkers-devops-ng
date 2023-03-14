@@ -1,3 +1,5 @@
+import { ETypeCode, ETypeItemCode } from './enums';
+
 export interface IInputTextParams {
   label?: string;
   placeholder?: string;
@@ -65,7 +67,19 @@ export interface IGalleryImageParams {
 }
 
 export interface ICodeBoxParams {
-  code: string;
+  code?: ICodeObject;
   contentAfterBefore: string;
   contentEditable: boolean;
+  iconCopy: string;
+  textCopy: string;
+}
+
+export interface ICodeObject {
+  type: ETypeCode;
+  content: ICodeItem[];
+}
+
+export interface ICodeItem {
+  type: ETypeItemCode;
+  data: string;
 }
