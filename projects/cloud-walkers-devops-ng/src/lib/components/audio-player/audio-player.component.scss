@@ -1,0 +1,70 @@
+.content-audio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem;
+
+  /* Define los estilos del elemento <audio> */
+  audio {
+    width: 100%;
+    max-width: 30rem;
+    margin-bottom: 1rem;
+
+    /* Define los estilos de los controles de audio */
+    &::-webkit-media-controls-panel {
+      background-color: var(--cw-color-tertiary-dark);
+      color: var(--cw-color-primary-white);
+      border-radius: 0.5rem;
+      box-shadow: 0 0 1rem var(--cw-color-box-shadow);
+
+      /* Define los estilos de los botones de los controles de audio */
+      button {
+        background-color: var(--cw-color-secondary-dark);
+        color: var(--cw-color-primary-white);
+        border: none;
+        border-radius: 0.5rem;
+        margin: 0.25rem;
+        padding: 0.5rem;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+
+        &:hover {
+          background-color: var(--cw-color-tertiary-dark);
+        }
+
+        &:disabled {
+          opacity: 0.5;
+          cursor: not-allowed;
+        }
+      }
+
+      /* Define los estilos de la barra de progreso */
+      &::-webkit-media-controls-timeline-container {
+        background-color: var(--cw-color-tertiary-dark);
+      }
+
+      /* Define los estilos de la barra de volumen */
+      &::-webkit-media-controls-volume-slider-container {
+        background-color: var(--cw-color-tertiary-dark);
+      }
+    }
+
+    /* Define los estilos de la barra de progreso */
+    &::-webkit-media-controls-timeline {
+      background-color: var(--cw-color-primary-white);
+      margin-left: 0.5rem;
+    }
+
+    /* Define los estilos del tiempo transcurrido */
+    &::-webkit-media-controls-current-time-display {
+      color: var(--cw-color-quinary-white);
+    }
+
+    /* Define los estilos del tiempo total */
+    &::-webkit-media-controls-time-remaining-display {
+      color: var(--cw-color-quinary-white);
+    }
+  }
+}

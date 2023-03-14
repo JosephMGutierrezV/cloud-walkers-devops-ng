@@ -83,3 +83,8 @@ export interface ICodeItem {
   type: ETypeItemCode;
   data: string;
 }
+
+export interface IParamsAudioPlayer {
+  src: string;
+  textNotSupported: string;
+}
