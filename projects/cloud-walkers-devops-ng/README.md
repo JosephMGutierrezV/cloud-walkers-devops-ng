@@ -97,4 +97,8 @@ Add README.MD
 
 ### v.0.0.19
 
-- Fix dependecys
+- Fix dependecies
+
+### v.0.0.20
+
+- Fix dependecies
