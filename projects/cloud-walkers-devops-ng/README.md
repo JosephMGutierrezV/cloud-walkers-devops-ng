@@ -83,3 +83,14 @@ Add README.MD
 ### v.0.0.17
 
 - Validation label button
+
+### v.0.0.18
+
+- Add commons colors
+- Add table
+- Add youtube player
+- Add Audio player
+- Add list
+- Add quote
+- Add code block
+- Add galery images

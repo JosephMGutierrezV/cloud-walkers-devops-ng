@@ -2,10 +2,10 @@
 
 
 :root {
-  --color-primary-dark: #00b7eb;
-  --color-primary-white: #e0ffff;
+  --cw-color-primary-dark: #00b7eb;
+  --cw-color-primary-white: #e0ffff;
   --color-ansi-bright-black: #6272a4;
-  --color-ansi-bright-blue: #d6acff;
+  --cw-color-tertiary-white: #d6acff;
   --color-secondary-white: rgb(41, 47, 54);
   --color-secondary-dark: rgb(15, 23, 31);
   --color-box-shadow: rgba(255, 255, 255, 0.05);
@@ -30,7 +30,7 @@ body {
   background-color: var(--color-secondary-white);
   font-family: sans-serif;
   font-size: 0.875rem;
-  color: var(--color-primary-dark);
+  color: var(--cw-color-primary-dark);
 }
 
 .card-container {
@@ -47,7 +47,7 @@ a:active {
 }
 
 .active-route {
-  background-color: var(--color-primary-dark);
+  background-color: var(--cw-color-primary-dark);
   color: var(--color-secondary-white) !important;
 }
 
@@ -64,5 +64,5 @@ a:active {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-ansi-bright-blue);
+  background: var(--cw-color-tertiary-white);
 }

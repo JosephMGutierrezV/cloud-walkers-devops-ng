@@ -22,8 +22,8 @@
   .c-inputtext {
     width: 100%;
     margin: 0;
-    color: #00b7eb;
-    background: rgba(255, 255, 255, 0.05);
+    color: var(--cw-color-primary-dark);
+    background: var(--cw-color-box-shadow);
     font-size: 1rem;
     padding: 0.429rem 0.571rem;
     border: 0.063rem solid transparent;
@@ -34,8 +34,8 @@
 
   .c-inputtext:focus {
     outline: none;
-    box-shadow: 0 0 0 0.063rem #6272a4;
-    border-color: #6272a4;
+    box-shadow: 0 0 0 0.063rem var(--cw-color-tertiary-dark);
+    border-color: var(--cw-color-tertiary-dark);
     ~ label {
       top: -0.2225rem;
     }
@@ -46,16 +46,16 @@
   }
 
   .invalid {
-    border-color: #ff5555 !important;
-    box-shadow: 0 0 0 0.063rem #ff5555 !important;
+    border-color: var(--cw-color-danger) !important;
+    box-shadow: 0 0 0 0.063rem var(--cw-color-danger) !important;
   }
 
   .invalid-text {
-    color: #ff5555;
+    color: var(--cw-color-danger);
   }
 
   .disabled-text {
-    color: #6272a4;
+    color: var(--cw-color-tertiary-dark);
   }
 
   .text-write {
