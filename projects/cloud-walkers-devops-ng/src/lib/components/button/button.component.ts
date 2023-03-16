@@ -7,7 +7,10 @@ import { IButtonParams } from '../../entities/interfaces';
   styleUrls: ['./button.component.scss'],
 })
 export class CButtonComponent {
-  @Input() params!: IButtonParams;
+  @Input() params: IButtonParams = {
+    label: '',
+  };
+
   @Input() disabled = false;
   @Input() invalid = false;
 

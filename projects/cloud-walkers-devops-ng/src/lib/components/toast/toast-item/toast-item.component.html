@@ -1,7 +1,7 @@
 <div
   #container
   [attr.id]="message.id"
-  [class]="message?.styleClass ?? ''"
+  [class]="message.styleClass ?? ''"
   [ngClass]="['c-toast-message-' + message.severity, 'c-toast-message']"
   [@messageState]="{
     value: 'visible',

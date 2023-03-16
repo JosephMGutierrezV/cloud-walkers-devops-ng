@@ -42,7 +42,10 @@ export class CTextAreaComponent
   @Input() params: ITextAreaParams = {
     disabled: false,
     name: 'c-text-area',
-  }
+    label: '',
+    cols: 30,
+    rows: 10,
+  };
   @ViewChild('cTextArea') cTextArea!: ElementRef;
   @Input() set disabled(value: boolean) {
     this._disabled = value;

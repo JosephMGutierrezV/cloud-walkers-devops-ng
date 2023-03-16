@@ -1,6 +1,3 @@
-/*
- * Public API Surface of cloud-walkers-devops-ng
- */
 export * from './lib/cloud-walkers-devops-ng.service';
 export * from './lib/cloud-walkers-devops-ng.component';
 export * from './lib/cloud-walkers-devops-ng.module';
@@ -21,3 +18,4 @@ export * from './lib/components/youtube-player/youtube-player.component';
 export * from './lib/components/image-gallery/image-gallery.component';
 export * from './lib/components/code-box/code-box.component';
 export * from './lib/components/audio-player/audio-player.component';
+export * from './lib/components/table/table.component';

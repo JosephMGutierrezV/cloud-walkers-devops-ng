@@ -42,7 +42,8 @@ export class CInputTextComponent
   @ViewChild('cInputText') cInputText!: ElementRef;
   @Input() params: IInputTextParams = {
     disabled: false,
-  }
+    helpText: '',
+  };
   @Input() set disabled(value: boolean) {
     this._disabled = value;
   }

@@ -88,3 +88,25 @@ export interface IParamsAudioPlayer {
   src: string;
   textNotSupported: string;
 }
+
+export interface IParamsTable {
+  caption: string;
+  columns: IColumn[];
+  rows: any[];
+}
+
+export interface IColumn {
+  header: string;
+  field: string;
+  type: string;
+  sortable: boolean;
+  filter: boolean;
+  filterMatchMode: string;
+  filterPlaceholder: string;
+  filterType: string;
+  filterMaxLength: number;
+  filterMinLength: number;
+  filterMax: number;
+  filterMin: number;
+  filterStep: number;
+}

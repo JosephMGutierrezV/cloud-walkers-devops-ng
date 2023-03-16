@@ -1,0 +1,19 @@
+<table>
+  <caption>
+    {{
+      params.caption
+    }}
+  </caption>
+  <thead>
+    <tr>
+      <th *ngFor="let column of params?.columns">{{ column.header }}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cell of params.rows">
+      <ng-container *ngFor="let column of params?.columns">
+        <td>{{ cell[column.field] }}</td>
+      </ng-container>
+    </tr>
+  </tbody>
+</table>

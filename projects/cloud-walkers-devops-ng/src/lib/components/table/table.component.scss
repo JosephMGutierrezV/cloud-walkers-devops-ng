@@ -1,0 +1,52 @@
+/* Estilos para el elemento <table> */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--cw-color-primary-white);
+  color: var(--cw-color-secondary-dark);
+  border-radius: 0.5rem;
+  box-shadow: 0 0 1rem var(--cw-color-box-shadow);
+
+  /* Estilos para el caption */
+  caption {
+    background-color: var(--cw-color-secondary-white);
+    color: var(--cw-color-primary-dark);
+    font-weight: bold;
+    padding: 1rem;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+  }
+
+  /* Estilos para el encabezado de la tabla */
+  thead {
+    background-color: var(--cw-color-secondary-dark);
+    color: var(--cw-color-primary-white);
+  }
+
+  th {
+    font-weight: bold;
+    padding: 1rem;
+  }
+
+  /* Estilos para el cuerpo de la tabla */
+  tbody {
+    background-color: var(--cw-color-primary-white);
+  }
+
+  tr {
+    color: var(--cw-color-primary-dark);
+    text-align: center;
+    &:nth-child(even) {
+      background-color: var(--cw-color-secondary-white);
+    }
+
+    &:hover {
+      background-color: var(--cw-color-tertiary-dark);
+      color: var(--cw-color-primary-white);
+    }
+  }
+
+  td {
+    padding: 1rem;
+  }
+}

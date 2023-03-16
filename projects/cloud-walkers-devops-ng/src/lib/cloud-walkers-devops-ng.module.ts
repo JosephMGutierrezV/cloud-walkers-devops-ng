@@ -16,6 +16,7 @@ import { CImageGalleryComponent } from './components/image-gallery/image-gallery
 import { CCodeBoxComponent } from './components/code-box/code-box.component';
 import { Clipboard } from '@angular/cdk/clipboard';
 import { CAudioPlayerComponent } from './components/audio-player/audio-player.component';
+import { CTableComponent } from './components/table/table.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { CAudioPlayerComponent } from './components/audio-player/audio-player.co
     CImageGalleryComponent,
     CCodeBoxComponent,
     CAudioPlayerComponent,
+    CTableComponent,
   ],
   imports: [
     CommonModule,
@@ -52,6 +54,7 @@ import { CAudioPlayerComponent } from './components/audio-player/audio-player.co
     CImageGalleryComponent,
     CCodeBoxComponent,
     CAudioPlayerComponent,
+    CTableComponent,
   ],
 })
 export class CloudWalkersDevopsNgModule {
