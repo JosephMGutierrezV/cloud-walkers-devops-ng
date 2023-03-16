@@ -20,3 +20,4 @@ export * from './lib/components/code-box/code-box.component';
 export * from './lib/components/audio-player/audio-player.component';
 export * from './lib/components/table/table.component';
 export * from './lib/components/list/list.component';
+export * from './lib/components/quote-list/quote-list.component';

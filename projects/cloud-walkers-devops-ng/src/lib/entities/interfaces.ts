@@ -123,3 +123,8 @@ export interface IListItem {
   disabled?: boolean;
   hidden?: boolean;
 }
+
+export interface IParamsQuoteList {
+  quote?: string;
+  author?: string;
+}

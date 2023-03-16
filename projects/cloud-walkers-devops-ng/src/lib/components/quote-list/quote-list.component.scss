@@ -1,0 +1,33 @@
+figure {
+  padding: 0;
+  font-size: 1.6rem; /* equivalente a 16px */
+  color: var(--cw-color-primary-dark);
+  text-align: center;
+  max-width: 50rem; /* equivalente a 800px */
+  margin: 0 auto; /* centra el elemento */
+  border: 0.2rem solid var(--cw-color-primary-dark);
+  border-radius: 1rem; /* equivalente a 16px */
+  box-shadow: 0 0.4rem 1rem var(--cw-color-box-shadow);
+
+  blockquote {
+    margin: 2rem 0; /* equivalente a 32px */
+    padding: 0;
+    font-style: italic;
+    border: none;
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+  figcaption {
+    margin-top: 1rem; /* equivalente a 16px */
+    font-size: 1.2rem; /* equivalente a 12px */
+    font-weight: bold;
+    color: var(--cw-color-primary-white);
+    text-align: right;
+    margin-right: 1rem; /* equivalente a 16px */
+    margin-bottom: 1rem; /* equivalente a 16px */
+  }
+}

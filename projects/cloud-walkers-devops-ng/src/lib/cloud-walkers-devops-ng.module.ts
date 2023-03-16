@@ -18,6 +18,7 @@ import { Clipboard } from '@angular/cdk/clipboard';
 import { CAudioPlayerComponent } from './components/audio-player/audio-player.component';
 import { CTableComponent } from './components/table/table.component';
 import { CListComponent } from './components/list/list.component';
+import { CQuoteListComponent } from './components/quote-list/quote-list.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { CListComponent } from './components/list/list.component';
     CAudioPlayerComponent,
     CTableComponent,
     CListComponent,
+    CQuoteListComponent,
   ],
   imports: [
     CommonModule,
@@ -58,6 +60,7 @@ import { CListComponent } from './components/list/list.component';
     CAudioPlayerComponent,
     CTableComponent,
     CListComponent,
+    CQuoteListComponent,
   ],
 })
 export class CloudWalkersDevopsNgModule {
