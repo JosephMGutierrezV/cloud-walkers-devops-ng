@@ -94,3 +94,7 @@ Add README.MD
 - Add quote
 - Add code block
 - Add galery images
+
+### v.0.0.19
+
+- Fix dependecys
