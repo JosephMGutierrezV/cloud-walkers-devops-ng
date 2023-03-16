@@ -110,3 +110,16 @@ export interface IColumn {
   filterMin: number;
   filterStep: number;
 }
+
+export interface IParamsList {
+  items?: IListItem[];
+  iconList: string;
+}
+
+export interface IListItem {
+  label?: string;
+  icon?: string;
+  link?: string;
+  disabled?: boolean;
+  hidden?: boolean;
+}

@@ -1,0 +1,7 @@
+<ul [style]="setIconList(params.iconList)">
+  <li *ngFor="let item of params?.items">
+    <button [disabled]="item.disabled" [hidden]="item.hidden">
+      <span>{{ item.label }}</span>
+    </button>
+  </li>
+</ul>
