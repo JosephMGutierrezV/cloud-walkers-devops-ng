@@ -89,3 +89,58 @@
   width: 100%;
   box-shadow: 0 0.125rem 0.25rem var(--cw-color-tertiary-dark);
 }
+
+.c-magic-neon {
+  border: none;
+  padding: 1rem 2rem;
+  background-color: var(--cw-color-secondary-dark);
+  color: var(--cw-color-primary-dark);
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: relative;
+  border-radius: 0.75rem;
+}
+
+.c-magic-neon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(
+    45deg,
+    var(--cw-color-primary-dark),
+    var(--cw-color-primary-white),
+    var(--cw-color-secondary-dark),
+    var(--cw-color-secondary-white),
+    var(--cw-color-tertiary-white),
+    var(--cw-color-tertiary-dark),
+    var(--cw-color-quaternary-dark),
+    var(--cw-color-quaternary-white),
+    var(--cw-color-quinary-dark),
+    var(--cw-color-quinary-white),
+    var(--cw-color-senary-dark),
+    var(--cw-color-senary-white),
+    var(--cw-color-box-shadow),
+    var(--cw-color-success),
+    var(--cw-color-danger),
+  );
+  background-size: 800%;
+  border-radius: 10px;
+  filter: blur(8px);
+  animation: neon 20s linear infinite;
+}
+
+@keyframes neon {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 400% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}

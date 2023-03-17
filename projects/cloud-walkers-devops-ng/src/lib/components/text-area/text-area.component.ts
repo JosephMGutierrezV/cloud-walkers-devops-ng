@@ -40,22 +40,20 @@ export class CTextAreaComponent
   implements ControlValueAccessor, OnDestroy, AfterViewInit, Validator
 {
   @Input() params: ITextAreaParams = {
-    disabled: false,
     name: 'c-text-area',
     label: '',
     cols: 30,
     rows: 10,
   };
+
+  @Input() disabled: boolean = false;
   @ViewChild('cTextArea') cTextArea!: ElementRef;
-  @Input() set disabled(value: boolean) {
-    this._disabled = value;
-  }
+
   public isValid = true;
   private subscriptions: Subscription[] = [];
   private _value = '';
   private onChange: (value: string) => void = () => {};
   private onTouched: () => void = () => {};
-  private _disabled: boolean = false;
 
   get value() {
     return this._value;
@@ -99,10 +97,6 @@ export class CTextAreaComponent
 
   registerOnTouched(fn: () => void): void {
     this.onTouched = fn;
-  }
-
-  setDisabledState(isDisabled: boolean): void {
-    this.disabled = isDisabled;
   }
 
   ngAfterViewInit() {}

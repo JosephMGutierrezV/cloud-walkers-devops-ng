@@ -1,7 +1,7 @@
 <label
   [ngClass]="{
     'invalid-text': !isValid,
-    'disabled-text': params.disabled
+    'disabled-text': disabled
   }"
   >{{ params.label }}</label
 >
@@ -10,8 +10,8 @@
     #cTextArea
     [(ngModel)]="value"
     class="c-inputtextarea"
-    [disabled]="params.disabled"
-    [ngClass]="{ invalid: !isValid && !params.disabled }"
+    [disabled]="disabled"
+    [ngClass]="{ invalid: !isValid && !disabled }"
     [name]="params.name"
     [cols]="params.cols"
     [rows]="params.rows"

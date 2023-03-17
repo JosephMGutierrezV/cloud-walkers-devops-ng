@@ -40,20 +40,19 @@ export class CInputTextComponent
   implements ControlValueAccessor, OnDestroy, AfterViewInit, Validator
 {
   @ViewChild('cInputText') cInputText!: ElementRef;
+
+  @Input() disabled: boolean = false;
+
   @Input() params: IInputTextParams = {
-    disabled: false,
     helpText: '',
   };
-  @Input() set disabled(value: boolean) {
-    this._disabled = value;
-  }
+
   public isValid = true;
   private inputText$!: Observable<any>;
   private subscriptions: Subscription[] = [];
   private _value = '';
   private onChange: (value: string) => void = () => {};
   private onTouched: () => void = () => {};
-  private _disabled: boolean = false;
 
   get value() {
     return this._value;
@@ -65,10 +64,6 @@ export class CInputTextComponent
       this.onChange(value);
       this.onTouched();
     }
-  }
-
-  get disabled() {
-    return this._disabled;
   }
 
   constructor() {}

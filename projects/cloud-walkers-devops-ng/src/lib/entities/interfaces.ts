@@ -7,7 +7,6 @@ export interface IInputTextParams {
   maxLength?: number;
   pattern?: string;
   patternMessage?: string;
-  disabled: boolean;
   readonly?: boolean;
   hidden?: boolean;
   hiddenLabel?: boolean;
@@ -25,7 +24,6 @@ export interface ITextAreaParams {
   maxLength?: number;
   pattern?: string;
   patternMessage?: string;
-  disabled: boolean;
   readonly?: boolean;
   hidden?: boolean;
   hiddenLabel?: boolean;
