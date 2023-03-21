@@ -40,3 +40,12 @@ export enum ETypeItemCode {
   PARAMETER = 'parameter',
   PROPERTY = 'property',
 }
+
+export enum EViewModeGantt {
+  QUARTER_DAY = 'Quarter Day',
+  HALF_DAY = 'Half Day',
+  DAY = 'Day',
+  WEEK = 'Week',
+  MONTH = 'Month',
+  YEAR = 'Year',
+}

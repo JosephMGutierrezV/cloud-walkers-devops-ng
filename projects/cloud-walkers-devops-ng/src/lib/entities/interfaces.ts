@@ -1,4 +1,4 @@
-import { ETypeCode, ETypeItemCode } from './enums';
+import { ETypeCode, ETypeItemCode, EViewModeGantt } from './enums';
 
 export interface IInputTextParams {
   label?: string;
@@ -125,4 +125,30 @@ export interface IListItem {
 export interface IParamsQuoteList {
   quote?: string;
   author?: string;
+}
+
+export interface IParamsGantt {
+  header_height: number;
+  column_width: number;
+  step: number;
+  view_modes: EViewModeGantt[];
+  bar_height: number;
+  bar_corner_radius: number;
+  arrow_curve: number;
+  padding: number;
+  view_mode: EViewModeGantt;
+  date_format: string;
+  popup_trigger: string;
+  custom_popup_html: string | null;
+  language: string;
+  tasks?: ITask[];
+}
+
+export interface ITask {
+  id: string;
+  name: string;
+  start: string;
+  end: string;
+  progress: number;
+  dependencies: string;
 }
