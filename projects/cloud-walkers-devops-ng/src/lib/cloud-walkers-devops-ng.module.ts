@@ -19,6 +19,7 @@ import { CAudioPlayerComponent } from './components/audio-player/audio-player.co
 import { CTableComponent } from './components/table/table.component';
 import { CListComponent } from './components/list/list.component';
 import { CQuoteListComponent } from './components/quote-list/quote-list.component';
+import { CScrollAnimationDirective } from './directives/c-scroll-animation/cloud-scroll-animation.directive';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { CQuoteListComponent } from './components/quote-list/quote-list.componen
     CTableComponent,
     CListComponent,
     CQuoteListComponent,
+    CScrollAnimationDirective,
   ],
   imports: [
     CommonModule,
@@ -61,6 +63,7 @@ import { CQuoteListComponent } from './components/quote-list/quote-list.componen
     CTableComponent,
     CListComponent,
     CQuoteListComponent,
+    CScrollAnimationDirective,
   ],
 })
 export class CloudWalkersDevopsNgModule {

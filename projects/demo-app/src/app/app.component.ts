@@ -7,9 +7,15 @@ import { IParamsList } from 'projects/cloud-walkers-devops-ng/src/public-api';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  public data = {
-    quote:
-      'La vida es como montar en bicicleta. Para mantener el equilibrio, debes seguir avanzando.',
-    author: 'Albert Einstein',
-  };
+
+  public task = [
+    {
+      id: '1',
+      name: 'Tarea 1',
+      start: '2023-05-10',
+      end: '2023-05-12',
+      progress: 50,
+      dependencies: ''
+    }
+  ];
 }

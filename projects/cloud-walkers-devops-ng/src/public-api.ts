@@ -21,3 +21,4 @@ export * from './lib/components/audio-player/audio-player.component';
 export * from './lib/components/table/table.component';
 export * from './lib/components/list/list.component';
 export * from './lib/components/quote-list/quote-list.component';
+export * from './lib/directives/c-scroll-animation/cloud-scroll-animation.directive';
